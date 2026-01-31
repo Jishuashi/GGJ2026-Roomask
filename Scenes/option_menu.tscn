@@ -1,29 +1,26 @@
-[gd_scene format=3 uid="uid://ceyapmnay67f4"]
+[gd_scene format=3 uid="uid://ju36podmldxh"]
 
 [ext_resource type="Script" uid="uid://c1dga68xxys6n" path="res://src/fr/roomask/option_menu.gd" id="1_xt6yv"]
-[ext_resource type="Texture2D" path="res://Assets/menu temp.png" id="2_47jcy"]
-[ext_resource type="FontFile" path="res://Assets/SuperMario256.ttf" id="3_gg4yi"]
-[ext_resource type="AudioStream" path="res://Assets/menu theme.wav" id="4_47jcy"]
+[ext_resource type="Texture2D" uid="uid://r81prq155wgp" path="res://Assets/Main _menu/menu temp.png" id="2_47jcy"]
+[ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/fonts/SuperMario256.ttf" id="3_gg4yi"]
+[ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/Sound/menu theme.wav" id="4_3036b"]
+[ext_resource type="Texture2D" uid="uid://efm2cnsiekk7" path="res://Assets/settings/master_volume_slider.png" id="5_gg4yi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3036b"]
 texture = ExtResource("2_47jcy")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aeafk"]
-corner_radius_top_left = 23
-corner_radius_top_right = 23
-corner_radius_bottom_right = 23
-corner_radius_bottom_left = 23
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aeafk"]
+texture = ExtResource("5_gg4yi")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8r5p"]
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 23
-corner_radius_top_right = 23
-corner_radius_bottom_right = 23
-corner_radius_bottom_left = 23
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg4yi"]
+texture = ExtResource("5_gg4yi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8r5p"]
+texture = ExtResource("5_gg4yi")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [node name="Control" type="Control" unique_id=1728665344]
 layout_mode = 3
@@ -56,68 +53,64 @@ offset_right = 1156.0
 offset_bottom = 662.0
 
 [node name="Label" type="Label" parent="." unique_id=436302770]
-layout_mode = 0
-offset_left = 95.0
-offset_top = 161.0
-offset_right = 1074.0
-offset_bottom = 420.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -483.0
+offset_top = 88.0
+offset_right = 496.0
+offset_bottom = 347.0
+grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_gg4yi")
 theme_override_font_sizes/font_size = 128
 text = "option menu
 "
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1611568354]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 155.0
-offset_top = 16.0
-offset_right = -284.0
-offset_bottom = 306.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 20
+[node name="musique" type="AudioStreamPlayer" parent="." unique_id=1304725383]
+stream = ExtResource("4_3036b")
+volume_db = -10.0
+autoplay = true
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=978650067]
-layout_mode = 2
-theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxFlat_aeafk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_h8r5p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_h8r5p")
-text = "Go Back"
+[node name="sound slider texture" type="Panel" parent="." unique_id=2108624620]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 293.0
+offset_right = 1239.0
+offset_bottom = 432.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_aeafk")
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1234226046]
-layout_mode = 2
-theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxFlat_aeafk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_h8r5p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_h8r5p")
-text = "Go Away"
-
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=225099218]
-layout_mode = 2
-theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxFlat_aeafk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_h8r5p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_h8r5p")
-text = "Go To The Main Menu
-"
-
-[node name="HSlider" type="HSlider" parent="VBoxContainer" unique_id=329489901]
-layout_mode = 2
+[node name="HSlider" type="HSlider" parent="sound slider texture" unique_id=685932797]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 70.0
+offset_right = 549.0
+offset_bottom = 114.0
 max_value = 1.0
 step = 0.001
 value = 1.0
 
-[node name="musique" type="AudioStreamPlayer" parent="." unique_id=1304725383]
-stream = ExtResource("4_47jcy")
-volume_db = -30.0
-autoplay = true
+[node name="slider name" type="Label" parent="sound slider texture" unique_id=2117207367]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 22.0
+offset_right = 677.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 50
+text = "sound volume :"
+
+[node name="Button" type="Button" parent="." unique_id=978650067]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 447.0
+offset_right = 1231.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxTexture_gg4yi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gg4yi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h8r5p")
+text = "Go Back"
 
 [connection signal="pressed" from="Panel/Button" to="." method="easter_egg_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="value_changed" from="VBoxContainer/HSlider" to="." method="volume_slider"]
+[connection signal="value_changed" from="sound slider texture/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

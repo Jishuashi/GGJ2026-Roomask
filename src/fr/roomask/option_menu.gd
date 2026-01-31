@@ -20,9 +20,7 @@ func easter_egg_on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/easter_egg.tscn")
 	
 
-
-func volume_slider(value: float) -> void:
-
+func _on_h_slider_value_changed(value: float) -> void:
 	var volume_db = linear_to_db(value)
 	
 	AudioServer.set_bus_volume_db(_master_bus_index, volume_db)

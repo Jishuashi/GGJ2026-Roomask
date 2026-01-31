@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dh036l6s7s88c" path="res://src/fr/roomask/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="Texture2D" uid="uid://r81prq155wgp" path="res://Assets/menu temp.png" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/SuperMario256.ttf" id="2_48xlc"]
+[ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/menu theme.wav" id="4_ce3w2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28flt"]
 texture = ExtResource("1_28flt")
@@ -106,6 +107,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_28flt")
 text = "Quit
 "
+
+[node name="main_menu_song" type="AudioStreamPlayer" parent="." unique_id=158410038]
+stream = ExtResource("4_ce3w2")
+volume_db = -30.0
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_option_pressed"]

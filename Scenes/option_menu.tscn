@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c1dga68xxys6n" path="res://src/fr/roomask/option_menu.gd" id="1_xt6yv"]
 [ext_resource type="Texture2D" uid="uid://r81prq155wgp" path="res://Assets/menu temp.png" id="2_47jcy"]
-[ext_resource type="AudioStream" uid="uid://d2jflbxqrshjh" path="res://Assets/eastereggsolo.wav" id="2_gg4yi"]
 [ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/SuperMario256.ttf" id="3_gg4yi"]
+[ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/menu theme.wav" id="4_47jcy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3036b"]
 texture = ExtResource("2_47jcy")
@@ -33,9 +33,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xt6yv")
-
-[node name="eastereeg" type="AudioStreamPlayer" parent="." unique_id=220132025]
-stream = ExtResource("2_gg4yi")
 
 [node name="Panel" type="Panel" parent="." unique_id=49442087]
 self_modulate = Color(0.13682577, 0.13682574, 0.13682571, 1)
@@ -107,6 +104,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_h8r5p")
 theme_override_styles/hover = SubResource("StyleBoxFlat_h8r5p")
 text = "Go To The Main Menu
 "
+
+[node name="musique" type="AudioStreamPlayer" parent="." unique_id=1304725383]
+stream = ExtResource("4_47jcy")
+volume_db = -30.0
+autoplay = true
 
 [connection signal="pressed" from="Panel/Button" to="." method="easter_egg_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

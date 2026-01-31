@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dc11tjir27gtt"
-path="res://.godot/imported/easteregg.wav-4757e4a5e8251383a8c9fe5f6f4631bc.sample"
+path="res://.godot/imported/easteregg.wav-3869c09621349bad810edb09d477de1f.sample"
 
 [deps]
 
-source_file="res://Assets/easteregg.wav"
-dest_files=["res://.godot/imported/easteregg.wav-4757e4a5e8251383a8c9fe5f6f4631bc.sample"]
+source_file="res://Assets/Sound/easteregg.wav"
+dest_files=["res://.godot/imported/easteregg.wav-3869c09621349bad810edb09d477de1f.sample"]
 
 [params]
 

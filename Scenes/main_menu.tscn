@@ -4,15 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://r81prq155wgp" path="res://Assets/menu temp.png" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/SuperMario256.ttf" id="2_48xlc"]
 [ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/menu theme.wav" id="4_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://chho8pfbflry8" path="res://Assets/start.png" id="5_n45e2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28flt"]
 texture = ExtResource("1_28flt")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erv1k"]
-corner_radius_top_left = 23
-corner_radius_top_right = 23
-corner_radius_bottom_right = 23
-corner_radius_bottom_left = 23
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opfnp"]
+texture = ExtResource("5_n45e2")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
 border_color = Color(0, 0, 0, 1)
@@ -24,6 +22,12 @@ expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erv1k"]
+corner_radius_top_left = 23
+corner_radius_top_right = 23
+corner_radius_bottom_right = 23
+corner_radius_bottom_left = 23
 
 [node name="MainMenu" type="Control" unique_id=874469002]
 layout_mode = 3
@@ -43,10 +47,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -508.0
-offset_top = -335.0
-offset_right = 583.0
-offset_bottom = 335.0
+offset_left = -880.0
+offset_top = -556.0
+offset_right = 981.0
+offset_bottom = 558.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_28flt")
@@ -65,7 +69,7 @@ offset_bottom = 108.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_48xlc")
-theme_override_font_sizes/font_size = 128
+theme_override_font_sizes/font_size = 200
 text = "roomask
 "
 
@@ -75,32 +79,38 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -79.0
+offset_left = -384.0
 offset_top = 7.0
-offset_right = 222.0
+offset_right = 475.0
 offset_bottom = 297.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=426566065]
-layout_mode = 2
+[node name="main_menu_song" type="AudioStreamPlayer" parent="." unique_id=158410038]
+stream = ExtResource("4_ce3w2")
+volume_db = -30.0
+autoplay = true
+
+[node name="Button" type="Button" parent="." unique_id=426566065]
+layout_mode = 0
+offset_left = -401.0
+offset_top = 86.0
+offset_right = 541.0
+offset_bottom = 230.0
 theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/normal = SubResource("StyleBoxTexture_opfnp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_28flt")
-text = "Start"
+text = "
+"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=825282592]
-layout_mode = 2
-theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
-theme_override_styles/hover = SubResource("StyleBoxFlat_28flt")
-text = "Option"
-
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1256089332]
-layout_mode = 2
+[node name="Button3" type="Button" parent="." unique_id=1256089332]
+layout_mode = 0
+offset_left = -676.0
+offset_top = -286.0
+offset_right = 266.0
+offset_bottom = -212.0
 theme_override_font_sizes/font_size = 54
 theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
@@ -108,11 +118,18 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_28flt")
 text = "Quit
 "
 
-[node name="main_menu_song" type="AudioStreamPlayer" parent="." unique_id=158410038]
-stream = ExtResource("4_ce3w2")
-volume_db = -30.0
-autoplay = true
+[node name="Button2" type="Button" parent="." unique_id=825282592]
+layout_mode = 0
+offset_left = -101.0
+offset_top = -512.0
+offset_right = 841.0
+offset_bottom = -438.0
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_28flt")
+text = "Option"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_option_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_option_pressed"]

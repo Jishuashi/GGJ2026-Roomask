@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Roomask"
-<<<<<<< HEAD
-run/main_scene="uid://b23ecot1cavk8"
-=======
 run/main_scene="uid://crs8bohrb6wxm"
->>>>>>> 3ee0bab13539751a0b8a307404939ae1faed84f5
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://o400kh4i1u6g"
 
 [display]
 

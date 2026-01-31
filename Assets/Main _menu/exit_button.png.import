@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drbmuh3k4kiwd"
-path="res://.godot/imported/easter_egg.png-2f55917aa902eacd2f59918ff91605b0.ctex"
+uid="uid://gpuwb7lxclri"
+path="res://.godot/imported/exit_button.png-19df503742fc6c45b0e33a8abc5aa5b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/easter_egg.png"
-dest_files=["res://.godot/imported/easter_egg.png-2f55917aa902eacd2f59918ff91605b0.ctex"]
+source_file="res://Assets/Main _menu/exit_button.png"
+dest_files=["res://.godot/imported/exit_button.png-19df503742fc6c45b0e33a8abc5aa5b6.ctex"]
 
 [params]
 

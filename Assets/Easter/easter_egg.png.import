@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl6qrm0kgx2ot"
-path="res://.godot/imported/ground.png-d6215276157ad844710057a2579c5395.ctex"
+uid="uid://drbmuh3k4kiwd"
+path="res://.godot/imported/easter_egg.png-416f8203742effe35af7340de4988c0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ground.png"
-dest_files=["res://.godot/imported/ground.png-d6215276157ad844710057a2579c5395.ctex"]
+source_file="res://Assets/Easter/easter_egg.png"
+dest_files=["res://.godot/imported/easter_egg.png-416f8203742effe35af7340de4988c0b.ctex"]
 
 [params]
 

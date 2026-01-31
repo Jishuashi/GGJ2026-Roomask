@@ -2,7 +2,7 @@ extends Node2D
 
 @export var layers : int = 8
 @export var width : int = 10
-@export var tileset_rsc : TileSet = preload("res://Assets/walls.tres") 
+@export var tileset_rsc : TileSet = preload("res://Assets/Room_1/walls.tres") 
 
 func _ready() -> void:
 	create_walls_layer() 

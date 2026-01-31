@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ceyapmnay67f4"]
 
 [ext_resource type="Script" uid="uid://c1dga68xxys6n" path="res://src/fr/roomask/option_menu.gd" id="1_xt6yv"]
-[ext_resource type="Texture2D" uid="uid://r81prq155wgp" path="res://Assets/menu temp.png" id="2_47jcy"]
-[ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/SuperMario256.ttf" id="3_gg4yi"]
-[ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/menu theme.wav" id="4_47jcy"]
+[ext_resource type="Texture2D" path="res://Assets/menu temp.png" id="2_47jcy"]
+[ext_resource type="FontFile" path="res://Assets/SuperMario256.ttf" id="3_gg4yi"]
+[ext_resource type="AudioStream" path="res://Assets/menu theme.wav" id="4_47jcy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3036b"]
 texture = ExtResource("2_47jcy")

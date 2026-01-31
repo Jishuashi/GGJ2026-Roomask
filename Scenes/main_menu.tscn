@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://crs8bohrb6wxm"]
 
 [ext_resource type="Script" uid="uid://dh036l6s7s88c" path="res://src/fr/roomask/main_menu.gd" id="1_1ehe0"]
-[ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/SuperMario256.ttf" id="2_48xlc"]
-[ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/menu theme.wav" id="4_ce3w2"]
-[ext_resource type="Texture2D" uid="uid://chho8pfbflry8" path="res://Assets/start.png" id="5_n45e2"]
-[ext_resource type="Texture2D" uid="uid://osdj34ul17xw" path="res://Assets/setting_logo.png" id="5_opfnp"]
-[ext_resource type="Texture2D" uid="uid://gpuwb7lxclri" path="res://Assets/exit_button.png" id="6_opfnp"]
+[ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/fonts/SuperMario256.ttf" id="2_48xlc"]
+[ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/Sound/menu theme.wav" id="4_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://chho8pfbflry8" path="res://Assets/Main _menu/start.png" id="5_n45e2"]
+[ext_resource type="Texture2D" uid="uid://osdj34ul17xw" path="res://Assets/Main _menu/setting_logo.png" id="5_opfnp"]
+[ext_resource type="Texture2D" uid="uid://gpuwb7lxclri" path="res://Assets/Main _menu/exit_button.png" id="6_opfnp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opfnp"]
 texture = ExtResource("5_n45e2")

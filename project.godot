@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Roomask"
-run/main_scene="uid://crs8bohrb6wxm"
+run/main_scene="uid://bbbpsx08ljsbn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

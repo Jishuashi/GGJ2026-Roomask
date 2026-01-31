@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bbbpsx08ljsbn"]
+
+[ext_resource type="Texture2D" uid="uid://cl6qrm0kgx2ot" path="res://Assets/ground.png" id="1_m8co2"]
+[ext_resource type="Script" uid="uid://cxbcaktc27ijt" path="res://src/fr/roomask/room_1/walls.gd" id="3_7r34j"]
+[ext_resource type="Script" uid="uid://cm0nw1ljvfenm" path="res://src/fr/roomask/room_1/room_1.gd" id="4_isvj2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r34j"]
+texture = ExtResource("1_m8co2")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/1 = 1
+
+[sub_resource type="TileSet" id="TileSet_h2yge"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(32, 16)
+physics_layer_0/collision_layer = 1
+navigation_layer_0/layers = 1
+sources/1 = SubResource("TileSetAtlasSource_7r34j")
+
+[node name="Node2D" type="Node2D" unique_id=2000407660]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1764263352]
+position = Vector2(80, 80)
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=903784798]
+y_sort_enabled = true
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_h2yge")
+script = ExtResource("4_isvj2")
+
+[node name="Walls" type="Node2D" parent="." unique_id=832142300]
+script = ExtResource("3_7r34j")

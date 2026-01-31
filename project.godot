@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Roomask"
-run/main_scene="uid://bbbpsx08ljsbn"
+run/main_scene="uid://crs8bohrb6wxm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [physics]
 
@@ -22,3 +27,4 @@ config/icon="res://Assets/icon.svg"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true

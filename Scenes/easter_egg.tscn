@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b6vgha7w2rpov"]
+
+[ext_resource type="Texture2D" uid="uid://drbmuh3k4kiwd" path="res://Assets/easter_egg.png" id="1_aq3mi"]
+[ext_resource type="AudioStream" uid="uid://dc11tjir27gtt" path="res://Assets/easteregg.wav" id="2_dxjnb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dxjnb"]
+texture = ExtResource("1_aq3mi")
+
+[node name="Control" type="Control" unique_id=257407413]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=681499774]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -6.0
+offset_right = 1163.0
+offset_bottom = 660.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dxjnb")
+
+[node name="audio_easter_egg" type="AudioStreamPlayer" parent="Panel" unique_id=1570198291]
+stream = ExtResource("2_dxjnb")
+autoplay = true

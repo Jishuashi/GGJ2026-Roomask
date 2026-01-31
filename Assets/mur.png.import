@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxgqjwtyhpcyj"
-path="res://.godot/imported/mur_v2.png-d4672e32ae8611d83f773f021ebedef3.ctex"
+uid="uid://cx1tjssc8480"
+path="res://.godot/imported/mur.png-dde994e68292a874b7b1e69965473116.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/mur_v2.png"
-dest_files=["res://.godot/imported/mur_v2.png-d4672e32ae8611d83f773f021ebedef3.ctex"]
+source_file="res://Assets/mur.png"
+dest_files=["res://.godot/imported/mur.png-dde994e68292a874b7b1e69965473116.ctex"]
 
 [params]
 

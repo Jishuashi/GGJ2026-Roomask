@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://crs8bohrb6wxm"]
 
+[ext_resource type="Script" uid="uid://dh036l6s7s88c" path="res://src/fr/roomask/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="Texture2D" uid="uid://r81prq155wgp" path="res://Assets/menu temp.png" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/SuperMario256.ttf" id="2_48xlc"]
 
@@ -33,6 +34,7 @@ anchor_bottom = 0.5
 offset_left = -83.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1ehe0")
 
 [node name="Panel" type="Panel" parent="." unique_id=480644913]
 self_modulate = Color(0.13682577, 0.13682574, 0.13682571, 1)
@@ -40,10 +42,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -487.0
-offset_top = -322.0
-offset_right = 577.0
-offset_bottom = 326.0
+offset_left = -492.0
+offset_top = -326.0
+offset_right = 572.0
+offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_28flt")
@@ -104,3 +106,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_28flt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_28flt")
 text = "Quit
 "
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_quit_pressed"]

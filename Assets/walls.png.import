@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h4ika6w8pyba"
-path="res://.godot/imported/carre_noir_blackout_tuesday_art-1_medium.jpg-f64dd831f10421df2065cc14b1c9dfbd.ctex"
+uid="uid://cjdwb61ixqynj"
+path="res://.godot/imported/walls.png-656140e73eae275ba08c5757c5a04b02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/carre_noir_blackout_tuesday_art-1_medium.jpg"
-dest_files=["res://.godot/imported/carre_noir_blackout_tuesday_art-1_medium.jpg-f64dd831f10421df2065cc14b1c9dfbd.ctex"]
+source_file="res://Assets/walls.png"
+dest_files=["res://.godot/imported/walls.png-656140e73eae275ba08c5757c5a04b02.ctex"]
 
 [params]
 

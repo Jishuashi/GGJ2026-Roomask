@@ -13,7 +13,7 @@ config_version=5
 config/name="Roomask"
 run/main_scene="uid://crs8bohrb6wxm"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://bibmab1e1rsb5"
+config/icon="uid://dtu06tj1wiyuh"
 
 [audio]
 

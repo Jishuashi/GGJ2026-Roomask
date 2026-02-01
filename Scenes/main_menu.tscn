@@ -2,20 +2,30 @@
 
 [ext_resource type="Script" uid="uid://dh036l6s7s88c" path="res://src/fr/roomask/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/fonts/SuperMario256.ttf" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://b43dynb7jkwgm" path="res://Assets/Main _menu/main_background.png" id="2_cp0ys"]
 [ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/Sound/menu theme.wav" id="4_ce3w2"]
-[ext_resource type="Texture2D" uid="uid://chho8pfbflry8" path="res://Assets/Main _menu/start.png" id="5_n45e2"]
+[ext_resource type="FontFile" uid="uid://dactyw124rdv2" path="res://Assets/fonts/CinzelDecorative-Regular.otf" id="4_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://osdj34ul17xw" path="res://Assets/Main _menu/setting_logo.png" id="5_opfnp"]
 [ext_resource type="Texture2D" uid="uid://gpuwb7lxclri" path="res://Assets/Main _menu/exit_button.png" id="6_opfnp"]
+[ext_resource type="Texture2D" uid="uid://efm2cnsiekk7" path="res://Assets/settings/master_volume_slider.png" id="6_trj04"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_trj04"]
+font = ExtResource("4_yhxw7")
+font_size = 224
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t1dhk"]
+texture = ExtResource("6_trj04")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opfnp"]
-texture = ExtResource("5_n45e2")
+texture = ExtResource("6_trj04")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vr1f0"]
-texture = ExtResource("5_n45e2")
+texture = ExtResource("6_trj04")
 expand_margin_left = 10.0
 expand_margin_top = 10.0
 expand_margin_right = 10.0
 expand_margin_bottom = 10.0
+modulate_color = Color(0.6683271, 0.7542632, 0.99743396, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cp0ys"]
 texture = ExtResource("5_opfnp")
@@ -57,6 +67,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1ehe0")
 
+[node name="MainBackground" type="Sprite2D" parent="." unique_id=2098434991]
+position = Vector2(83, 0)
+texture = ExtResource("2_cp0ys")
+
 [node name="Label" type="Label" parent="." unique_id=1977986965]
 layout_mode = 1
 anchors_preset = 8
@@ -64,41 +78,42 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -475.5
-offset_top = -92.0
-offset_right = 605.5
-offset_bottom = 311.0
+offset_left = -470.5
+offset_top = -113.0
+offset_right = 610.5
+offset_bottom = 290.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_48xlc")
 theme_override_font_sizes/font_size = 200
 text = "roomask
 "
+label_settings = SubResource("LabelSettings_trj04")
 
 [node name="main_menu_song" type="AudioStreamPlayer" parent="." unique_id=158410038]
 stream = ExtResource("4_ce3w2")
-volume_db = -30.0
+volume_db = -10.0
 autoplay = true
 
 [node name="Button" type="Button" parent="." unique_id=426566065]
 layout_mode = 0
-offset_left = -358.0
-offset_top = 119.0
-offset_right = 584.0
-offset_bottom = 304.0
-theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxTexture_opfnp")
+offset_left = -357.0
+offset_top = 120.0
+offset_right = 585.0
+offset_bottom = 357.0
+theme_override_fonts/font = ExtResource("4_yhxw7")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxTexture_t1dhk")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_opfnp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_vr1f0")
-text = "
-"
+text = "Play"
 
 [node name="Button2" type="Button" parent="." unique_id=825282592]
 layout_mode = 0
-offset_left = 817.0
-offset_top = -502.0
-offset_right = 894.0
-offset_bottom = -422.0
+offset_left = -30.0
+offset_top = -514.0
+offset_right = 47.0
+offset_bottom = -434.0
 theme_override_font_sizes/font_size = 54
 theme_override_styles/normal = SubResource("StyleBoxTexture_cp0ys")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_cp0ys")
@@ -111,10 +126,10 @@ light_mask = 513
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-offset_left = 926.0
-offset_top = -503.0
-offset_right = 927.0
-offset_bottom = -423.0
+offset_left = 138.0
+offset_top = -513.0
+offset_right = 139.0
+offset_bottom = -433.0
 theme_override_font_sizes/font_size = 54
 theme_override_styles/normal = SubResource("StyleBoxTexture_yhxw7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_yhxw7")

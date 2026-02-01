@@ -3,14 +3,6 @@ extends Control
 @export var anim_lancement : SpriteFrames = preload("res://Assets/Main _menu/animation login.tres")
 
 func _ready() -> void:
-<<<<<<< HEAD
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-=======
 	play_anim(anim_lancement)
 
 func play_anim(ressource_frames : SpriteFrames):
@@ -39,7 +31,6 @@ func play_anim2(ressource_frames : SpriteFrames):
 	await get_tree().create_timer(1.0).timeout
 	animated_sprite.queue_free()
 
->>>>>>> c4f15cf9da3c1595c9221063c900391a86ff3654
 func _on_start_pressed() -> void:
 	await play_anim2(anim_lancement)
 	get_tree().change_scene_to_file("res://Scenes/room_1.tscn")

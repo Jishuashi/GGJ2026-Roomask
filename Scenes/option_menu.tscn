@@ -1,29 +1,46 @@
 [gd_scene format=3 uid="uid://ju36podmldxh"]
 
 [ext_resource type="Script" uid="uid://c1dga68xxys6n" path="res://src/fr/roomask/option_menu.gd" id="1_xt6yv"]
-[ext_resource type="Texture2D" uid="uid://r81prq155wgp" path="res://Assets/Main _menu/menu temp.png" id="2_47jcy"]
+[ext_resource type="Texture2D" uid="uid://b43dynb7jkwgm" path="res://Assets/Main _menu/main_background.png" id="2_gg4yi"]
 [ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/fonts/SuperMario256.ttf" id="3_gg4yi"]
 [ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/Sound/menu theme.wav" id="4_3036b"]
+[ext_resource type="FontFile" uid="uid://dactyw124rdv2" path="res://Assets/fonts/CinzelDecorative-Regular.otf" id="4_aeafk"]
+[ext_resource type="Texture2D" uid="uid://efm2cnsiekk7" path="res://Assets/settings/master_volume_slider.png" id="5_gg4yi"]
+[ext_resource type="SpriteFrames" uid="uid://b233ke2rqffvb" path="res://Assets/Main _menu/animation login.tres" id="7_aeafk"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3036b"]
-texture = ExtResource("2_47jcy")
+[sub_resource type="LabelSettings" id="LabelSettings_h8r5p"]
+font = ExtResource("4_aeafk")
+font_size = 129
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aeafk"]
-corner_radius_top_left = 23
-corner_radius_top_right = 23
-corner_radius_bottom_right = 23
-corner_radius_bottom_left = 23
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aeafk"]
+texture = ExtResource("5_gg4yi")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8r5p"]
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 23
-corner_radius_top_right = 23
-corner_radius_bottom_right = 23
-corner_radius_bottom_left = 23
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
+[sub_resource type="LabelSettings" id="LabelSettings_8nwj0"]
+font = ExtResource("4_aeafk")
+font_size = 54
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg4yi"]
+texture = ExtResource("5_gg4yi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8r5p"]
+texture = ExtResource("5_gg4yi")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjg1g"]
+texture = ExtResource("5_gg4yi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nwj0"]
+texture = ExtResource("5_gg4yi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikvg2"]
+texture = ExtResource("5_gg4yi")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [node name="Control" type="Control" unique_id=1728665344]
 layout_mode = 3
@@ -34,83 +51,91 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xt6yv")
 
-[node name="Panel" type="Panel" parent="." unique_id=49442087]
-self_modulate = Color(0.13682577, 0.13682574, 0.13682571, 1)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -12.0
-offset_top = -22.0
-offset_right = 3.0
-offset_bottom = 8.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_3036b")
-
-[node name="Button" type="Button" parent="Panel" unique_id=1657978228]
-layout_mode = 0
-offset_left = 1148.0
-offset_top = 654.0
-offset_right = 1156.0
-offset_bottom = 662.0
+[node name="MainBackground" type="Sprite2D" parent="." unique_id=1431547332]
+position = Vector2(960, 540)
+texture = ExtResource("2_gg4yi")
 
 [node name="Label" type="Label" parent="." unique_id=436302770]
-layout_mode = 0
-offset_left = 95.0
-offset_top = 161.0
-offset_right = 1074.0
-offset_bottom = 420.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -490.0
+offset_top = 388.0
+offset_right = 489.0
+offset_bottom = 647.0
+grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_gg4yi")
 theme_override_font_sizes/font_size = 128
-text = "option menu
+text = "Option Menu
 "
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1611568354]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 241.0
-offset_top = 7.0
-offset_right = -198.0
-offset_bottom = 297.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 20
-
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=978650067]
-layout_mode = 2
-theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxFlat_aeafk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_h8r5p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_h8r5p")
-text = "Go Back"
-
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1234226046]
-layout_mode = 2
-theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxFlat_aeafk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_h8r5p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_h8r5p")
-text = "Go Away"
-
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=225099218]
-layout_mode = 2
-theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxFlat_aeafk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_h8r5p")
-theme_override_styles/hover = SubResource("StyleBoxFlat_h8r5p")
-text = "Go To The Main Menu
-"
+label_settings = SubResource("LabelSettings_h8r5p")
 
 [node name="musique" type="AudioStreamPlayer" parent="." unique_id=1304725383]
 stream = ExtResource("4_3036b")
-volume_db = -30.0
+volume_db = -10.0
 autoplay = true
 
-[connection signal="pressed" from="Panel/Button" to="." method="easter_egg_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[node name="sound slider texture" type="Panel" parent="." unique_id=2108624620]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 569.0
+offset_right = 1253.0
+offset_bottom = 708.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_aeafk")
+
+[node name="HSlider" type="HSlider" parent="sound slider texture" unique_id=685932797]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 70.0
+offset_right = 549.0
+offset_bottom = 114.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="slider name" type="Label" parent="sound slider texture" unique_id=2117207367]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 24.0
+offset_right = 633.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 50
+text = "Sound Volume :"
+label_settings = SubResource("LabelSettings_8nwj0")
+
+[node name="Button" type="Button" parent="." unique_id=978650067]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 906.0
+offset_right = 1253.0
+offset_bottom = 1035.0
+theme_override_fonts/font = ExtResource("4_aeafk")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxTexture_gg4yi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gg4yi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h8r5p")
+text = "Go Back"
+
+[node name="login_page" type="AnimatedSprite2D" parent="." unique_id=2140961240]
+position = Vector2(960, 540)
+sprite_frames = ExtResource("7_aeafk")
+animation = &"idk"
+
+[node name="Button2" type="Button" parent="." unique_id=1935581336]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 742.0
+offset_right = 1253.0
+offset_bottom = 874.0
+theme_override_fonts/font = ExtResource("4_aeafk")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxTexture_tjg1g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8nwj0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ikvg2")
+text = "Credit
+"
+
+[connection signal="value_changed" from="sound slider texture/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

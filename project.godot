@@ -11,15 +11,21 @@ config_version=5
 [application]
 
 config/name="Roomask"
-run/main_scene="uid://b23ecot1cavk8"
+run/main_scene="uid://crs8bohrb6wxm"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://Assets/icon.svg"
-<<<<<<<HEADrun/main_scene="uid://b23ecot1cavk8"
+config/icon="uid://bibmab1e1rsb5"
+
+[audio]
+
+buses/default_bus_layout="uid://o400kh4i1u6g"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=4
+window/size/resizable=false
+<<<<<<<HEADwindow/size/mode=2
 
 [physics]
 

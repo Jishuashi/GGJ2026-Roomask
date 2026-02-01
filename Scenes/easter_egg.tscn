@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b6vgha7w2rpov"]
 
-[ext_resource type="Texture2D" uid="uid://drbmuh3k4kiwd" path="res://Assets/easter_egg.png" id="1_aq3mi"]
-[ext_resource type="AudioStream" uid="uid://dc11tjir27gtt" path="res://Assets/easteregg.wav" id="2_dxjnb"]
+[ext_resource type="Texture2D" uid="uid://drbmuh3k4kiwd" path="res://Assets/Easter/easter_egg.png" id="1_aq3mi"]
+[ext_resource type="Script" uid="uid://cnqpm4xtyxwii" path="res://Scenes/easter_egg.gd" id="1_if3sg"]
+[ext_resource type="AudioStream" uid="uid://dc11tjir27gtt" path="res://Assets/Sound/easteregg.wav" id="2_dxjnb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dxjnb"]
 texture = ExtResource("1_aq3mi")
@@ -13,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_if3sg")
 
 [node name="Panel" type="Panel" parent="." unique_id=681499774]
 layout_mode = 0
@@ -24,4 +26,18 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_dxjnb")
 
 [node name="audio_easter_egg" type="AudioStreamPlayer" parent="Panel" unique_id=1570198291]
 stream = ExtResource("2_dxjnb")
+volume_db = -6.265
 autoplay = true
+
+[node name="Button" type="Button" parent="." unique_id=1965361207]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 219.0
+offset_right = 732.0
+offset_bottom = 561.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button" unique_id=2042670646]
+stream = ExtResource("2_dxjnb")
+volume_db = 24.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

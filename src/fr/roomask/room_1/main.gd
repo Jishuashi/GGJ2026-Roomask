@@ -2,9 +2,11 @@ extends Node2D
 
 @export var anim_lancement : SpriteFrames = preload("res://Assets/Main _menu/animation login.tres")
 signal change_rt_room
+signal close_puzzle
 
 func _ready() -> void:
 	play_anim(anim_lancement)
+	
 
 func play_anim(ressource_frames : SpriteFrames):
 	var animated_sprite = AnimatedSprite2D.new()
@@ -50,9 +52,15 @@ func _input(event):
 	if event.is_action_pressed("quit"):
 		await play_anim2(anim_lancement)
 		get_tree().quit()
-		await play_anim(anim_lancement)
-
 
 func _on_button_pressed() -> void:
 	await play_anim2(anim_lancement)
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+
+func _on_button_2_pressed() -> void:
+	var children = get_children()
+	for child in children:
+		if(child.name == 'Button2'):
+			child.hide()
+	await get_tree().create_timer(0.5).timeout
+	close_puzzle.emit()

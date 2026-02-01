@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xnr32amcvmif"
-path="res://.godot/imported/sheeeeeesh1.png-817591742c3d846b081cce13fa58be6c.ctex"
+uid="uid://un5blshfpcv0"
+path="res://.godot/imported/curtain_anim14.png-8a2bbb6cbd8f25865f693b770132f6cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Main _menu/sheeeeeesh1.png"
-dest_files=["res://.godot/imported/sheeeeeesh1.png-817591742c3d846b081cce13fa58be6c.ctex"]
+source_file="res://Assets/Main _menu/curtain_anim14.png"
+dest_files=["res://.godot/imported/curtain_anim14.png-8a2bbb6cbd8f25865f693b770132f6cc.ctex"]
 
 [params]
 

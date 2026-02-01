@@ -1,0 +1,287 @@
+{
+	"level": "room_1",
+	"view": [{
+		"nb_assets": 18,
+		"assets": [{
+			"name": "fountain_bottom",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":10,"y":4}, {"x":9,"y":5}, {"x":8,"y":6}],
+			"textures": [{"x":2,"y":8},  {"x":1,"y":8}, {"x":0,"y":8}],
+			"z":1
+			},{
+			"name": "fountain_middle",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":9,"y":3}, {"x":8,"y":4}, {"x":7,"y":5}],
+			"textures": [{"x":2,"y":7},  {"x":1,"y":7}, {"x":0,"y":7}],
+			"z":2
+			},
+			{
+			"name": "fountain_top",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":8,"y":2}, {"x":7,"y":3}],
+			"textures": [{"x":2,"y":6}, {"x":1,"y":6}],
+			"z":3
+			},
+			{
+			"name": "lib_bottom",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":6,"y":0}, {"x":5,"y":1}],
+			"textures": [{"x":8,"y":8}, {"x":7,"y":8}],
+			"z":1
+			},
+			{
+			"name": "lib_middle",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":5,"y":-1}, {"x":4,"y":0}],
+			"textures": [{"x":8,"y":7}, {"x":7,"y":7}],
+			"z":2
+			},
+			{
+			"name": "lib_m_top",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":4,"y":-2}, {"x":3,"y":-1}],
+			"textures": [{"x":8,"y":6}, {"x":7,"y":6}],
+			"z":3
+			},
+			{
+			"name": "lib_top",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":3,"y":-3}, {"x":2,"y":-2}],
+			"textures": [{"x":8,"y":5}, {"x":7,"y":5}],
+			"z":4
+			},
+			{
+			"name": "desk_bottom",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":4, "y":10}, {"x":5,"y":9}, {"x":6,"y":8}],
+			"textures": [{"x":9,"y":8}, {"x":10,"y":8}, {"x":11,"y":8}],
+			"z":1
+			},
+			{
+			"name": "desk_middle",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":3, "y":9}, {"x":4,"y":8}, {"x":5,"y":7}],
+			"textures": [{"x":9,"y":7}, {"x":10,"y":7}, {"x":11,"y":7}],
+			"z":2
+			},
+			{
+			"name": "desk_top",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":2, "y":8}, {"x":3,"y":7}, {"x":4,"y":6}],
+			"textures": [{"x":9,"y":6}, {"x":10,"y":6}, {"x":11,"y":6}],
+			"z":3
+			},
+			{
+			"name": "door_bottom",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":0, "y":7}],
+			"textures": [{"x":3,"y":8}],
+			"z":1
+			},
+			{
+			"name": "door_middle",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":-1, "y":6}],
+			"textures": [{"x":3,"y":7}],
+			"z":2
+			},
+			{
+			"name": "door_top",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":-2, "y":5}],
+			"textures": [{"x":3,"y":6}],
+			"z":3
+			},
+			{
+			"name": "cryst_bottom",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":5, "y":5}],
+			"textures": [{"x":9,"y":3}],
+			"z":1
+			},
+			{
+			"name": "cryst_bottom",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":4, "y":4}],
+			"textures": [{"x":9,"y":2}],
+			"z":2
+			},
+			{
+			"name": "cryst_top",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":3, "y":3}],
+			"textures": [{"x":9,"y":1}],
+			"z":3
+			},
+			{
+			"name": "chest",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":0, "y":3}, {"x":0, "y":2}],
+			"textures": [{"x":16,"y":8}, {"x":17, "y":8}],
+			"z":4
+			},
+			{
+			"name": "bear",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":7, "y":-2}],
+			"textures": [{"x":4,"y":8}],
+			"z":3
+			}]
+		},
+		{
+		"nb_assets": 17,
+		"assets": [{
+			"name": "fountain_bottom",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":1,"y":6}, {"x":2,"y":5}, {"x":3,"y":4}],
+			"textures": [{"x":2,"y":3},  {"x":3,"y":3}, {"x":4,"y":3}],
+			"z":1
+			},{
+			"name": "fountain_middle",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":0,"y":5}, {"x":1,"y":4}, {"x":2,"y":3}],
+			"textures": [{"x":2,"y":2},  {"x":3,"y":2}, {"x":4,"y":2}],
+			"z":2
+			},
+			{
+			"name": "fountain_top",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":0,"y":5}, {"x":1,"y":4}],
+			"textures": [{"x":2,"y":1}, {"x":3,"y":1}],
+			"z":3
+			},
+			{
+			"name": "cryst_bottom",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":7, "y":7}],
+			"textures": [{"x":9,"y":3}],
+			"z":1
+			},
+			{
+			"name": "cryst_bottom",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":6, "y":6}],
+			"textures": [{"x":9,"y":2}],
+			"z":2
+			},
+			{
+			"name": "cryst_top",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":5, "y":5}],
+			"textures": [{"x":9,"y":1}],
+			"z":3
+			},
+			{
+			"name": "desk_bottom",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":6,"y":0}, {"x":5,"y":1}, {"x":4,"y":2}],
+			"textures": [{"x":8,"y":3}, {"x":7,"y":3}, {"x":6,"y":3}],
+			"z":1
+			},
+			{
+			"name": "desk_mid",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":5,"y":-1}, {"x":4,"y":0}, {"x":3,"y":1}],
+			"textures": [{"x":8,"y":2}, {"x":7,"y":2}, {"x":6,"y":2}],
+			"z":2
+			},
+			{
+			"name": "desk_mid_top",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":4,"y":-2}, {"x":3,"y":-1}, {"x":2,"y":0}],
+			"textures": [{"x":8,"y":1}, {"x":7,"y":1}, {"x":6,"y":1}],
+			"z":3
+			},
+			{
+			"name": "desk_top",
+			"id":3,
+			"nbtiles": 3,
+			"pos":[{"x":3,"y":-1}, {"x":2,"y":-2}, {"x":1,"y":-1}],
+			"textures": [{"x":8,"y":0}, {"x":7,"y":0}, {"x":6,"y":0}],
+			"z":4
+			},
+			{
+			"name": "chair_bottom",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":4,"y":2}],
+			"textures": [{"x":5,"y":3}],
+			"z":1
+			},
+			{
+			"name": "chair_top",
+			"id":3,
+			"nbtiles": 1,
+			"pos":[{"x":3,"y":1}],
+			"textures": [{"x":5,"y":2}],
+			"z":2
+			},
+			{
+			"name": "paint_bottom",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":6,"y":-1}, {"x":7,"y":-2}],
+			"textures": [{"x":10,"y":3}, {"x":11,"y":3}],
+			"z":3
+			},
+			{
+			"name": "paint_top",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":5,"y":-2}, {"x":6,"y":-3}],
+			"textures": [{"x":10,"y":2}, {"x":11,"y":2}],
+			"z":4
+			},
+			{
+			"name": "lib_bottom",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":4, "y":10}, {"x":5,"y":9}],
+			"textures": [{"x":0,"y":3}, {"x":1,"y":3}],
+			"z":1
+			},
+			{
+			"name": "lib_mid",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":3, "y":9}, {"x":4,"y":8}],
+			"textures": [{"x":0,"y":2}, {"x":1,"y":2}],
+			"z":2
+			},
+			{
+			"name": "lib_mid",
+			"id":3,
+			"nbtiles": 2,
+			"pos":[{"x":2, "y":8}, {"x":3,"y":7}],
+			"textures": [{"x":0,"y":1}, {"x":1,"y":1}],
+			"z":3
+			}]
+		}]
+}

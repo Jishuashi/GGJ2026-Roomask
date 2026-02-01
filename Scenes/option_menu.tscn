@@ -5,9 +5,7 @@
 [ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/fonts/SuperMario256.ttf" id="3_gg4yi"]
 [ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/Sound/menu theme.wav" id="4_3036b"]
 [ext_resource type="Texture2D" uid="uid://efm2cnsiekk7" path="res://Assets/settings/master_volume_slider.png" id="5_gg4yi"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nwj0"]
-texture = ExtResource("2_gg4yi")
+[ext_resource type="SpriteFrames" uid="uid://b233ke2rqffvb" path="res://Assets/Main _menu/animation login.tres" id="7_aeafk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aeafk"]
 texture = ExtResource("5_gg4yi")
@@ -31,14 +29,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xt6yv")
 
-[node name="Panel" type="Panel" parent="." unique_id=1124529693]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_8nwj0")
+[node name="MainBackground" type="Sprite2D" parent="." unique_id=1431547332]
+position = Vector2(960, 540)
+texture = ExtResource("2_gg4yi")
 
 [node name="Label" type="Label" parent="." unique_id=436302770]
 layout_mode = 1
@@ -107,6 +100,11 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_gg4yi")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_gg4yi")
 theme_override_styles/hover = SubResource("StyleBoxTexture_h8r5p")
 text = "Go Back"
+
+[node name="login_page" type="AnimatedSprite2D" parent="." unique_id=2140961240]
+position = Vector2(960, 540)
+sprite_frames = ExtResource("7_aeafk")
+animation = &"idk"
 
 [connection signal="value_changed" from="sound slider texture/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="sound slider texture/HSlider/Button" to="." method="_on_button_pressed"]

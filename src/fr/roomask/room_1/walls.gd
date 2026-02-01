@@ -5,7 +5,11 @@ extends Node2D
 @export var tileset_rsc : TileSet = preload("res://Assets/Room_1/walls.tres") 
 
 func _ready() -> void:
+	get_parent().change_rt_room.connect(_on_reload)
 	create_walls_layer() 
+
+func 	_on_reload()-> void:
+	create_walls_layer()
 
 func create_walls_layer():
 	var size = 32
@@ -16,11 +20,11 @@ func create_walls_layer():
 		
 		new_layer.name = "Layers_" + str(z)
 		new_layer.tile_set = tileset_rsc
-		new_layer.z_index = z
+		new_layer.z_index = z - 1
 		new_layer.y_sort_enabled = true
 		new_layer.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-		new_layer.scale = Vector2(4, 4)
-		new_layer.position.y = -z * (size * 2)
+		new_layer.scale = Vector2(2, 2)
+		new_layer.position.y = -z * size + 32
 		
 		add_child(new_layer)
 		
@@ -28,12 +32,12 @@ func create_walls_layer():
 			var x = -2
 			var y = -1 
 			while (y < (width - 1)):
-				new_layer.set_cell(Vector2i(x, y), 0, Vector2i(7, 0))
+				new_layer.set_cell(Vector2i(x, y), 0, Vector2i(2, 0))
 				y += 1
 			y = -2
 			x = -1 
 			while (x < (width - 1)):
-				new_layer.set_cell(Vector2i(x, y), 0, Vector2i(6, 0))
+				new_layer.set_cell(Vector2i(x, y), 0, Vector2i(5, 0))
 				x += 1
 		else:
 			var x = -2

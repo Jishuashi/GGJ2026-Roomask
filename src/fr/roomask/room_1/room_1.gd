@@ -4,8 +4,13 @@ extends TileMapLayer
 @export var heigh : int = 10
 
 func	_ready() -> void:
+	get_parent().change_rt_room.connect(_on_reload)
 	generate_rhombus()
-	
+
+func 	_on_reload()-> void:
+	clear()
+	generate_rhombus()	
+
 func generate_rhombus() -> void:
 	clear()
 	

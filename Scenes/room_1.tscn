@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://bbbpsx08ljsbn"]
 
 [ext_resource type="Texture2D" uid="uid://cl6qrm0kgx2ot" path="res://Assets/Room_1/ground.png" id="1_m8co2"]
+[ext_resource type="Script" uid="uid://du5uclbp7dm7o" path="res://src/fr/roomask/room_1/main.gd" id="1_uu0ng"]
 [ext_resource type="Script" uid="uid://cxbcaktc27ijt" path="res://src/fr/roomask/room_1/walls.gd" id="3_7r34j"]
 [ext_resource type="Script" uid="uid://cm0nw1ljvfenm" path="res://src/fr/roomask/room_1/room_1.gd" id="4_isvj2"]
 [ext_resource type="Script" uid="uid://ehh3dbjc4kq0" path="res://src/fr/roomask/room_1/room.gd" id="4_uu0ng"]
+[ext_resource type="Texture2D" uid="uid://pls3txri2o10" path="res://Assets/Room_1/curtain.png" id="6_gn78r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r34j"]
 texture = ExtResource("1_m8co2")
@@ -21,14 +23,19 @@ navigation_layer_0/layers = 1
 sources/1 = SubResource("TileSetAtlasSource_7r34j")
 
 [node name="Node2D" type="Node2D" unique_id=2000407660]
+script = ExtResource("1_uu0ng")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1764263352]
-position = Vector2(80, 80)
+position = Vector2(18, 29)
+
+[node name="Curtain" type="Sprite2D" parent="." unique_id=1875522219]
+position = Vector2(17, 29)
+texture = ExtResource("6_gn78r")
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=903784798]
 y_sort_enabled = true
 texture_filter = 1
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_h2yge")
 script = ExtResource("4_isvj2")
 

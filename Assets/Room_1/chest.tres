@@ -1,0 +1,21 @@
+[gd_resource type="TileSet" format=3 uid="uid://cp15lbo2w7jtx"]
+
+[ext_resource type="Texture2D" uid="uid://c1v867kj4mvhx" path="res://Assets/Room_1/chest.png" id="1_68ce4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dtry4"]
+texture = ExtResource("1_68ce4")
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/1 = 1
+1:0/next_alternative_id = 2
+1:0/0 = 0
+1:0/1 = 1
+0:1/0 = 0
+1:1/0 = 0
+
+[resource]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(32, 16)
+sources/2 = SubResource("TileSetAtlasSource_dtry4")

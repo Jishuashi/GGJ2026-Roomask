@@ -2,10 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://cl6qrm0kgx2ot" path="res://Assets/Room_1/ground.png" id="1_m8co2"]
 [ext_resource type="Script" uid="uid://du5uclbp7dm7o" path="res://src/fr/roomask/room_1/main.gd" id="1_uu0ng"]
+[ext_resource type="Texture2D" uid="uid://b43dynb7jkwgm" path="res://Assets/Main _menu/main_background.png" id="2_vxiu1"]
 [ext_resource type="Script" uid="uid://cxbcaktc27ijt" path="res://src/fr/roomask/room_1/walls.gd" id="3_7r34j"]
+[ext_resource type="Texture2D" uid="uid://lle1ra8uoiy2" path="res://Assets/Main _menu/curtain_anim1.png" id="3_xf8eb"]
 [ext_resource type="Script" uid="uid://cm0nw1ljvfenm" path="res://src/fr/roomask/room_1/room_1.gd" id="4_isvj2"]
 [ext_resource type="Script" uid="uid://ehh3dbjc4kq0" path="res://src/fr/roomask/room_1/room.gd" id="4_uu0ng"]
-[ext_resource type="Texture2D" uid="uid://pls3txri2o10" path="res://Assets/Room_1/curtain.png" id="6_gn78r"]
 [ext_resource type="Texture2D" uid="uid://efm2cnsiekk7" path="res://Assets/settings/master_volume_slider.png" id="7_jwkej"]
 [ext_resource type="AudioStream" uid="uid://dwo3vwaaelbbt" path="res://Assets/Sound/main theme es2.wav" id="8_vxiu1"]
 
@@ -40,9 +41,15 @@ script = ExtResource("1_uu0ng")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1764263352]
 position = Vector2(18, 29)
 
-[node name="Curtain" type="Sprite2D" parent="." unique_id=1875522219]
-position = Vector2(17, 29)
-texture = ExtResource("6_gn78r")
+[node name="Back" type="Sprite2D" parent="." unique_id=85320730]
+position = Vector2(15, 25)
+texture = ExtResource("2_vxiu1")
+
+[node name="Curtain" type="Sprite2D" parent="." unique_id=1189210982]
+z_index = 16
+position = Vector2(18.49996, 19.499983)
+scale = Vector2(1.0036458, 1.0157408)
+texture = ExtResource("3_xf8eb")
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=903784798]
 y_sort_enabled = true

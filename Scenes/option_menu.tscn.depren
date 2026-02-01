@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://ju36podmldxh"]
+
+[ext_resource type="Script" uid="uid://c1dga68xxys6n" path="res://src/fr/roomask/option_menu.gd" id="1_xt6yv"]
+[ext_resource type="Texture2D" uid="uid://b43dynb7jkwgm" path="res://Assets/Main _menu/main_background.png" id="2_gg4yi"]
+[ext_resource type="FontFile" uid="uid://b4snijaxcpspg" path="res://Assets/fonts/SuperMario256.ttf" id="3_gg4yi"]
+[ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/Sound/menu theme.wav" id="4_3036b"]
+[ext_resource type="Texture2D" uid="uid://efm2cnsiekk7" path="res://Assets/settings/master_volume_slider.png" id="5_gg4yi"]
+[ext_resource type="SpriteFrames" uid="uid://bndwfng01qqw8" path="res://Assets/Main _menu/new_sprite_frames.tres" id="6_3036b"]
+[ext_resource type="SpriteFrames" uid="uid://b233ke2rqffvb" path="res://Assets/Main _menu/animation login.tres" id="7_aeafk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aeafk"]
+texture = ExtResource("5_gg4yi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg4yi"]
+texture = ExtResource("5_gg4yi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8r5p"]
+texture = ExtResource("5_gg4yi")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="Control" type="Control" unique_id=1728665344]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xt6yv")
+
+[node name="MainBackground" type="Sprite2D" parent="." unique_id=1215551024]
+position = Vector2(958, 539.00006)
+scale = Vector2(1.0020833, 1.0018518)
+texture = ExtResource("2_gg4yi")
+
+[node name="Label" type="Label" parent="." unique_id=436302770]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -490.0
+offset_top = 388.0
+offset_right = 489.0
+offset_bottom = 647.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_gg4yi")
+theme_override_font_sizes/font_size = 128
+text = "option menu
+"
+
+[node name="musique" type="AudioStreamPlayer" parent="." unique_id=1304725383]
+stream = ExtResource("4_3036b")
+volume_db = -10.0
+autoplay = true
+
+[node name="sound slider texture" type="Panel" parent="." unique_id=2108624620]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 602.0
+offset_right = 1253.0
+offset_bottom = 741.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_aeafk")
+
+[node name="HSlider" type="HSlider" parent="sound slider texture" unique_id=685932797]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 70.0
+offset_right = 549.0
+offset_bottom = 114.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+
+[node name="Button" type="Button" parent="sound slider texture/HSlider" unique_id=117361520]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.091000006
+offset_left = 856.0
+offset_top = 88.0
+offset_right = 864.0
+offset_bottom = 91.996
+
+[node name="slider name" type="Label" parent="sound slider texture" unique_id=2117207367]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 22.0
+offset_right = 677.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 50
+text = "sound volume :"
+
+[node name="Button" type="Button" parent="." unique_id=978650067]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 805.0
+offset_right = 1243.0
+offset_bottom = 934.0
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxTexture_gg4yi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gg4yi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h8r5p")
+text = "Go Back"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=325782941]
+position = Vector2(955, 537)
+sprite_frames = ExtResource("6_3036b")
+frame_progress = 0.09758453
+
+[node name="login_page" type="AnimatedSprite2D" parent="." unique_id=2140961240]
+position = Vector2(85, 0)
+sprite_frames = ExtResource("7_aeafk")
+
+[connection signal="value_changed" from="sound slider texture/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="sound slider texture/HSlider/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

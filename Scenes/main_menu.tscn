@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://osdj34ul17xw" path="res://Assets/Main _menu/setting_logo.png" id="5_opfnp"]
 [ext_resource type="Texture2D" uid="uid://gpuwb7lxclri" path="res://Assets/Main _menu/exit_button.png" id="6_opfnp"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3bi6"]
+texture = ExtResource("2_cp0ys")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opfnp"]
 texture = ExtResource("5_n45e2")
 
@@ -58,10 +61,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1ehe0")
 
-[node name="MainBackground" type="Sprite2D" parent="." unique_id=524780995]
-position = Vector2(81, -1)
-scale = Vector2(1.0020833, 1.0018518)
-texture = ExtResource("2_cp0ys")
+[node name="Panel" type="Panel" parent="." unique_id=1490430985]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -877.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m3bi6")
 
 [node name="Label" type="Label" parent="." unique_id=1977986965]
 layout_mode = 1

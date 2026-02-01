@@ -6,6 +6,9 @@
 [ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/Sound/menu theme.wav" id="4_3036b"]
 [ext_resource type="Texture2D" uid="uid://efm2cnsiekk7" path="res://Assets/settings/master_volume_slider.png" id="5_gg4yi"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nwj0"]
+texture = ExtResource("2_gg4yi")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aeafk"]
 texture = ExtResource("5_gg4yi")
 
@@ -28,10 +31,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xt6yv")
 
-[node name="MainBackground" type="Sprite2D" parent="." unique_id=1215551024]
-position = Vector2(958, 539.00006)
-scale = Vector2(1.0020833, 1.0018518)
-texture = ExtResource("2_gg4yi")
+[node name="Panel" type="Panel" parent="." unique_id=1124529693]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8nwj0")
 
 [node name="Label" type="Label" parent="." unique_id=436302770]
 layout_mode = 1

@@ -35,6 +35,16 @@ expand_margin_top = 10.0
 expand_margin_right = 10.0
 expand_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ybfm"]
+texture = ExtResource("7_jwkej")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rxny8"]
+texture = ExtResource("7_jwkej")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
 [node name="Node2D" type="Node2D" unique_id=2000407660]
 script = ExtResource("1_uu0ng")
 
@@ -64,6 +74,11 @@ script = ExtResource("3_7r34j")
 [node name="Room" type="Node2D" parent="." unique_id=1211125835]
 script = ExtResource("4_uu0ng")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=657076138]
+stream = ExtResource("8_vxiu1")
+volume_db = -10.0
+autoplay = true
+
 [node name="Button" type="Button" parent="." unique_id=1362181734]
 z_index = 16
 offset_left = -706.0
@@ -74,9 +89,16 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_vxiu1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xf8eb")
 text = "Back to menu"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=657076138]
-stream = ExtResource("8_vxiu1")
-volume_db = -10.0
-autoplay = true
+[node name="Button2" type="Button" parent="." unique_id=1465244206]
+visible = false
+z_index = 60
+offset_left = -706.0
+offset_top = -434.0
+offset_right = -434.0
+offset_bottom = -364.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8ybfm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rxny8")
+text = "back"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -8,6 +8,7 @@ func _ready() -> void:
 	var data = file.get_as_text()
 	var parsed = JSON.parse_string(data)
 	get_parent().change_rt_room.connect(_on_realod)
+	get_parent().close_puzzle.connect(delpuzzle)
 	put_in_room(parsed)
 
 func	 _on_realod() -> void:
@@ -56,6 +57,10 @@ func _unhandled_input(event: InputEvent) -> void:
 				if ((map_coords == Vector2i(3, 0) || map_coords == Vector2i(4, 0))):
 					await play_anim2(anim_lancement)
 					print_puzzle()
+					var children = get_parent().get_children()	
+					for child2 in children:
+						if(child2.name == 'Button2'):
+							child2.show()
 					await play_anim(anim_lancement)
 					return
 		
@@ -64,10 +69,20 @@ func print_puzzle():
 	var puzzle = Sprite2D.new()
 	puzzle.texture = load("res://Assets/Room_1/puzzle.png")
 	puzzle.scale = Vector2(0.6, 0.6)
+	puzzle.name = "get_mask"
 	puzzle.position.x += 32
 	puzzle.z_index = 15
 	
 	add_child(puzzle)
+	
+func delpuzzle():
+	var children = get_children()
+	
+	for child in children:
+		if (child.name == "get_mask"):
+			await play_anim2(anim_lancement)
+			child.queue_free()
+			await play_anim(anim_lancement)
 
 @export var anim_lancement : SpriteFrames = preload("res://Assets/Main _menu/animation login.tres")
 

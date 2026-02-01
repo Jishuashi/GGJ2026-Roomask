@@ -1,5 +1,42 @@
 [gd_scene format=3 uid="uid://w7r31rdophul"]
 
+[ext_resource type="Script" uid="uid://fds41s2obkn8" path="res://src/fr/roomask/layout.gd" id="1_mkkwg"]
+[ext_resource type="Texture2D" uid="uid://b43dynb7jkwgm" path="res://Assets/Main _menu/main_background.png" id="2_gg0bb"]
+[ext_resource type="Texture2D" uid="uid://efm2cnsiekk7" path="res://Assets/settings/master_volume_slider.png" id="3_8qcx7"]
+[ext_resource type="FontFile" uid="uid://dactyw124rdv2" path="res://Assets/fonts/CinzelDecorative-Regular.otf" id="3_uxr01"]
+[ext_resource type="Texture2D" uid="uid://c78c71na51y57" path="res://Assets/layout/escm.png" id="5_5trqe"]
+[ext_resource type="Texture2D" uid="uid://l1gw6at5clv0" path="res://Assets/layout/flechem.png" id="6_6q6g6"]
+[ext_resource type="AudioStream" uid="uid://hjtkseyspxqy" path="res://Assets/Sound/menu theme.wav" id="7_6q6g6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lyc52"]
+texture = ExtResource("3_8qcx7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5trqe"]
+texture = ExtResource("3_8qcx7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6q6g6"]
+texture = ExtResource("3_8qcx7")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p7ao2"]
+texture = ExtResource("3_8qcx7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6r2m"]
+texture = ExtResource("3_8qcx7")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wkmng"]
+texture = ExtResource("3_8qcx7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i0db8"]
+texture = ExtResource("3_8qcx7")
+
 [node name="Control" type="Control" unique_id=230915110]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +44,111 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mkkwg")
+
+[node name="MainBackground" type="Sprite2D" parent="." unique_id=1045860819]
+position = Vector2(960, 540)
+texture = ExtResource("2_gg0bb")
+
+[node name="Button" type="Button" parent="." unique_id=307678601]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 972.0
+offset_right = 1176.0
+offset_bottom = 1066.0
+theme_override_fonts/font = ExtResource("3_uxr01")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxTexture_lyc52")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5trqe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6q6g6")
+text = "Play"
+
+[node name="Button2" type="Button" parent="." unique_id=642846952]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 853.0
+offset_right = 1176.0
+offset_bottom = 937.0
+theme_override_fonts/font = ExtResource("3_uxr01")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_p7ao2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m6r2m")
+text = "Back To Menu"
+
+[node name="Escm" type="Sprite2D" parent="." unique_id=2096185509]
+position = Vector2(716.00006, 396)
+scale = Vector2(0.64453125, 0.609375)
+texture = ExtResource("5_5trqe")
+
+[node name="Flechem" type="Sprite2D" parent="." unique_id=242922970]
+position = Vector2(799, 588)
+scale = Vector2(0.6210939, 0.61328125)
+texture = ExtResource("6_6q6g6")
+
+[node name="Flechem2" type="Sprite2D" parent="." unique_id=446483611]
+position = Vector2(634, 587.99994)
+rotation = -3.1415927
+scale = Vector2(0.6038334, 0.6137784)
+texture = ExtResource("6_6q6g6")
+
+[node name="Panel" type="Panel" parent="." unique_id=2031575472]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 335.0
+offset_right = 1368.0
+offset_bottom = 489.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wkmng")
+
+[node name="Panel" type="Panel" parent="Panel" unique_id=436784760]
+layout_mode = 0
+offset_left = -223.0
+offset_top = -201.0
+offset_right = 172.0
+offset_bottom = -47.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wkmng")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1033334501]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 510.0
+offset_right = 1357.0
+offset_bottom = 654.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_i0db8")
+
+[node name="Label" type="Label" parent="." unique_id=476375582]
+layout_mode = 0
+offset_left = 1014.0
+offset_top = 546.0
+offset_right = 1352.0
+offset_bottom = 602.0
+theme_override_fonts/font = ExtResource("3_uxr01")
+theme_override_font_sizes/font_size = 35
+text = "Move The Scene"
+
+[node name="Label2" type="Label" parent="." unique_id=1795141370]
+layout_mode = 0
+offset_left = 1101.0
+offset_top = 381.0
+offset_right = 1404.0
+offset_bottom = 442.0
+theme_override_fonts/font = ExtResource("3_uxr01")
+theme_override_font_sizes/font_size = 35
+text = "Quit"
+
+[node name="Label2" type="Label" parent="Label2" unique_id=2024024431]
+layout_mode = 0
+offset_left = -259.0
+offset_top = -194.0
+offset_right = 81.0
+offset_bottom = -135.0
+theme_override_fonts/font = ExtResource("3_uxr01")
+theme_override_font_sizes/font_size = 35
+text = "Command"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1896673406]
+stream = ExtResource("7_6q6g6")
+volume_db = -10.0
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

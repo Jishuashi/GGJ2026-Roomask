@@ -45,3 +45,8 @@ func _on_button_pressed() -> void:
 func _on_button_2_pressed() -> void:
 	await play_anim2(anim_lancement)
 	get_tree().change_scene_to_file("res://Scenes/credit.tscn")
+
+
+func _on_button_3_pressed() -> void:
+	await play_anim2(anim_lancement)
+	get_tree().change_scene_to_file("res://Scenes/LAYOUT.tscn")

@@ -40,12 +40,16 @@ func play_anim2(ressource_frames : SpriteFrames):
 	
 	animated_sprite.play("end")
 	await get_tree().create_timer(1.0).timeout
-	animated_sprite.queue_free()
+	animated_sprite.queue_free() 
 	
 func _input(event):
 	if event.is_action_pressed("Move_Scene"):
 		await play_anim2(anim_lancement)
 		change_rt_room.emit()
+		await play_anim(anim_lancement)
+	if event.is_action_pressed("quit"):
+		await play_anim2(anim_lancement)
+		get_tree().quit()
 		await play_anim(anim_lancement)
 
 

@@ -76,56 +76,74 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m6r2m")
 text = "Back To Menu"
 
 [node name="Escm" type="Sprite2D" parent="." unique_id=2096185509]
-position = Vector2(579.00006, 383)
+position = Vector2(716.00006, 396)
 scale = Vector2(0.64453125, 0.609375)
 texture = ExtResource("5_5trqe")
 
 [node name="Flechem" type="Sprite2D" parent="." unique_id=242922970]
-position = Vector2(669, 546)
+position = Vector2(799, 588)
 scale = Vector2(0.6210939, 0.61328125)
 texture = ExtResource("6_6q6g6")
 
 [node name="Flechem2" type="Sprite2D" parent="." unique_id=446483611]
-position = Vector2(497.00003, 544)
+position = Vector2(634, 587.99994)
 rotation = -3.1415927
 scale = Vector2(0.6038334, 0.6137784)
 texture = ExtResource("6_6q6g6")
 
 [node name="Panel" type="Panel" parent="." unique_id=2031575472]
 layout_mode = 0
-offset_left = 922.0
-offset_top = 285.0
-offset_right = 1317.0
-offset_bottom = 439.0
+offset_left = 973.0
+offset_top = 335.0
+offset_right = 1368.0
+offset_bottom = 489.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wkmng")
+
+[node name="Panel" type="Panel" parent="Panel" unique_id=436784760]
+layout_mode = 0
+offset_left = -223.0
+offset_top = -201.0
+offset_right = 172.0
+offset_bottom = -47.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wkmng")
 
 [node name="Panel2" type="Panel" parent="." unique_id=1033334501]
 layout_mode = 0
-offset_left = 922.0
-offset_top = 468.0
-offset_right = 1306.0
-offset_bottom = 612.0
+offset_left = 973.0
+offset_top = 510.0
+offset_right = 1357.0
+offset_bottom = 654.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_i0db8")
 
 [node name="Label" type="Label" parent="." unique_id=476375582]
 layout_mode = 0
-offset_left = 962.0
-offset_top = 511.0
-offset_right = 1300.0
-offset_bottom = 567.0
+offset_left = 1014.0
+offset_top = 546.0
+offset_right = 1352.0
+offset_bottom = 602.0
 theme_override_fonts/font = ExtResource("3_uxr01")
 theme_override_font_sizes/font_size = 35
 text = "Move The Scene"
 
 [node name="Label2" type="Label" parent="." unique_id=1795141370]
 layout_mode = 0
-offset_left = 1065.0
-offset_top = 327.0
-offset_right = 1361.0
-offset_bottom = 383.0
+offset_left = 1101.0
+offset_top = 381.0
+offset_right = 1404.0
+offset_bottom = 442.0
 theme_override_fonts/font = ExtResource("3_uxr01")
 theme_override_font_sizes/font_size = 35
 text = "Quit"
+
+[node name="Label2" type="Label" parent="Label2" unique_id=2024024431]
+layout_mode = 0
+offset_left = -259.0
+offset_top = -194.0
+offset_right = 81.0
+offset_bottom = -135.0
+theme_override_fonts/font = ExtResource("3_uxr01")
+theme_override_font_sizes/font_size = 35
+text = "Command"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1896673406]
 stream = ExtResource("7_6q6g6")

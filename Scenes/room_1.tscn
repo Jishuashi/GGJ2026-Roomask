@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cm0nw1ljvfenm" path="res://src/fr/roomask/room_1/room_1.gd" id="4_isvj2"]
 [ext_resource type="Script" uid="uid://ehh3dbjc4kq0" path="res://src/fr/roomask/room_1/room.gd" id="4_uu0ng"]
 [ext_resource type="Texture2D" uid="uid://efm2cnsiekk7" path="res://Assets/settings/master_volume_slider.png" id="7_jwkej"]
+[ext_resource type="AudioStream" uid="uid://dwo3vwaaelbbt" path="res://Assets/Sound/main theme es2.wav" id="8_vxiu1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r34j"]
 texture = ExtResource("1_m8co2")
@@ -72,5 +73,10 @@ offset_bottom = -364.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_vxiu1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xf8eb")
 text = "Back to menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=657076138]
+stream = ExtResource("8_vxiu1")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

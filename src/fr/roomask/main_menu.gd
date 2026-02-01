@@ -33,7 +33,7 @@ func play_anim2(ressource_frames : SpriteFrames):
 
 func _on_start_pressed() -> void:
 	await play_anim2(anim_lancement)
-	get_tree().change_scene_to_file("res://Scenes/room_1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/LAYOUT.tscn")
 
 func _on_option_pressed() -> void:
 	await play_anim2(anim_lancement)

@@ -12,7 +12,7 @@ func play_anim(ressource_frames : SpriteFrames):
 	add_child(animated_sprite)
 	
 	animated_sprite.centered = true
-	animated_sprite.z_index = 17
+	animated_sprite.z_index = 16
 	
 	var camera = get_viewport().get_camera_2d()
 	if camera:
@@ -30,7 +30,7 @@ func play_anim2(ressource_frames : SpriteFrames):
 	add_child(animated_sprite)
 	
 	animated_sprite.centered = true
-	animated_sprite.z_index = 17
+	animated_sprite.z_index = 16
 	
 	var camera = get_viewport().get_camera_2d()
 	if camera:
@@ -44,6 +44,11 @@ func play_anim2(ressource_frames : SpriteFrames):
 	
 func _input(event):
 	if event.is_action_pressed("Move_Scene"):
-		await play_anim(anim_lancement)
-		change_rt_room.emit()
 		await play_anim2(anim_lancement)
+		change_rt_room.emit()
+		await play_anim(anim_lancement)
+
+
+func _on_button_pressed() -> void:
+	await play_anim2(anim_lancement)
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")

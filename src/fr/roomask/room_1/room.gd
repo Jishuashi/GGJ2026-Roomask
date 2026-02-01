@@ -45,4 +45,64 @@ func put_in_room(pData):
 			new_layer.set_cell(Vector2i(int(new_data.pos[e].x), int(new_data.pos[e].y)), int(new_data.id), Vector2i(int(new_data.textures[e].x), int(new_data.textures[e].y)))
 			e+=1
 		i+=1
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		for child in get_children():
+			if (child is TileMapLayer && child.name == "Assest_desk_mid_click"):
+				var local_pos = child.get_local_mouse_position()
+				var map_coords = child.local_to_map(local_pos)
+				print(map_coords)
+				if ((map_coords == Vector2i(3, 0) || map_coords == Vector2i(4, 0))):
+					await play_anim2(anim_lancement)
+					print_puzzle()
+					await play_anim(anim_lancement)
+					return
+		
+
+func print_puzzle():
+	var puzzle = Sprite2D.new()
+	puzzle.texture = load("res://Assets/Room_1/puzzle.png")
+	puzzle.scale = Vector2(0.6, 0.6)
+	puzzle.position.x += 32
+	puzzle.z_index = 15
 	
+	add_child(puzzle)
+
+@export var anim_lancement : SpriteFrames = preload("res://Assets/Main _menu/animation login.tres")
+
+func play_anim(ressource_frames : SpriteFrames):
+	var animated_sprite = AnimatedSprite2D.new()
+	animated_sprite.sprite_frames = ressource_frames
+	add_child(animated_sprite)
+	
+	animated_sprite.centered = true
+	animated_sprite.z_index = 16
+	
+	var camera = get_viewport().get_camera_2d()
+	if camera:
+		animated_sprite.global_position = camera.get_screen_center_position()
+	else:
+		animated_sprite.global_position = Vector2.ZERO
+	
+	animated_sprite.play("default")
+	await get_tree().create_timer(1.0).timeout
+	animated_sprite.queue_free()
+	
+func play_anim2(ressource_frames : SpriteFrames):
+	var animated_sprite = AnimatedSprite2D.new()
+	animated_sprite.sprite_frames = ressource_frames
+	add_child(animated_sprite)
+	
+	animated_sprite.centered = true
+	animated_sprite.z_index = 16
+	
+	var camera = get_viewport().get_camera_2d()
+	if camera:
+		animated_sprite.global_position = camera.get_screen_center_position()
+	else:
+		animated_sprite.global_position = Vector2.ZERO
+	
+	animated_sprite.play("end")
+	await get_tree().create_timer(1.0).timeout
+	animated_sprite.queue_free()
